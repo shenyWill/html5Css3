@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>localStorage</h1>
+    <hr>
+    <p>刷新页面：count增加</p>
+    <p>count值：<span class="countNum"></span></p>
+</body>
+<script>
+    var countNode = document.getElementsByClassName('countNum')[0];
+    if(localStorage.getItem('count')) {
+        localStorage.count =parseInt(localStorage.count,10) + 1;
+    }else {
+        localStorage.setItem('count',1)
+    }
+    countNode.innerHTML = localStorage.count;
+</script>
+</html>

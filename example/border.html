@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        height: 50px;
+        width: 200px;
+        margin: 20px;
+        text-align: center;
+        line-height: 50px;
+    }
+    .box1{
+        border-radius: 25px;
+        background: burlywood;
+    }
+    .box2{
+        background: cadetblue;
+        box-shadow: 10px 10px 5px saddlebrown;
+    }
+    .box3{
+        background: skyblue;
+        border-image: url(../lib/border.png) 7 33 round;
+        -moz-border-image: url(../lib/border.png) 7 33 round;
+        -o-border-image: url(../lib/border.png) 7 33 round;
+        -webkit-border-image: url(../lib/border.png) 7 33 round;
+    }
+    </style>
+</head>
+<body>
+    <h1>border的border-radius box-shadow border-image</h1>
+    <hr>
+    <div class="box box1">
+        矩形有圆角
+    </div>
+    <div class="box box2">
+        矩形有阴影
+    </div>
+    <div class="box box3">
+        矩形有边框背景
+    </div>
+</body>
+</html>

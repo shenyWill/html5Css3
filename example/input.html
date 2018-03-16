@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../lib/jquery-3.3.1.min.js"></script>
+    <script src="../lib/RangeSlider.js"></script>
+    <style>
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 300px;
+            border-radius: 10px;
+            /*这个属性设置使填充进度条时的图形为圆角*/
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            height: 15px;
+            border-radius: 10px;
+            /*将轨道设为圆角的*/
+            box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+            /*轨道内置阴影效果*/
+        }
+
+        input[type=range]:focus {
+            outline: none;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 25px;
+            width: 25px;
+            margin-top: -5px;
+            /*使滑块超出轨道部分的偏移量相等*/
+            background: #ffffff;
+            border-radius: 50%;
+            /*外观设置为圆形*/
+            border: solid 0.125em rgba(205, 224, 230, 0.5);
+            /*设置边框*/
+            box-shadow: 0 .125em .125em #3b4547;
+            /*添加底部阴影*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>input表单控件</h1>
+    <hr>
+    <ul>
+        <li>
+            <p>type=number</p>
+            <input type="number" name="" id="">
+        </li>
+        <li>
+            <p>type=range</p>
+            <input type="range" autocomplete="additional-name">
+        </li>
+    </ul>
+</body>
+<script>
+    var change = function ($input) {
+        /*内容可自行定义*/
+        console.log("123");
+    }
+
+    $('input[type="range"]').RangeSlider({ min: 0, max: 100, step: 0.1, callback: change });
+
+</script>
+
+</html>
